@@ -1,0 +1,29 @@
+/* 디자인 CSS */
+body {}
+#weather {
+    /* 1. 크기 393x852 */
+    width: 393px; height: 852px;
+    /* 2. 간격(형제사이(css는 형제선택자에 작성해야함)), 패딩(부모-자식) */
+    /* 패딩 상하(50) 좌우(15) */
+    padding: 50px 15px;
+    /* 3. 배경색 */
+    background-color: #C3E3FE;
+}
+/* 부모(#weather) 안 모든(*) 자식(>) */
+#weather > * {padding-bottom:20px}
+#weather h1 {}
+#weather .area {
+    font-size: 24px;
+}
+#weather .temperature {
+    font-size: 32px;
+}
+#weather p {}
+#weather .sub_title {
+    font-size: 20px;
+}
+#weather .humidity {}
+#weather .dust {}
+#weather .result {
+    line-height:1.5;/* 150% */
+}

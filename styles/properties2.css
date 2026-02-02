@@ -1,0 +1,32 @@
+body {}
+.wrap {
+    background-color: #eee;
+    width: 402px; height: 100vh;
+    padding: 30px 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrap h2, /* 그룹선택자 (,) 기준으로 뒤 선택자 RESET, 부모부터 다시쓰기 */
+.wrap h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+/* 인접형제선택자를 이용한 p 선택방법 + 그룹(,) */
+.wrap h2+p,
+.wrap h3+p {font-size: 0.75rem; margin-bottom: 15px;}
+.wrap h2+p em {color: red;}
+/* 수열선택자를 이용한 p 선택방법 + 그룹(,) */
+/* .wrap p:nth-child(2),
+.wrap p:nth-child(5) {font-size: 0.75rem; margin-bottom: 15px;}
+.wrap p:nth-child(2) em {color: red;} */
+.wrap p {}
+.wrap p em {}
+.wrap #content {margin: 0 0 30px;}/* margin: 상 좌우 하 */
+.wrap #content span {background-color: #FFF583;}
+.wrap h3 {}
+/* 아래 두개는 똑같음. 표현만 다른거임 */
+.wrap h3+p {}
+.wrap h3:nth-child(5) {}
+.wrap .details {}
+.wrap .details em {}
