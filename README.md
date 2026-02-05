@@ -16,7 +16,6 @@
     * `형제선택자:nth-child(n)` : n번째 형제
     * `형제선택자:nth-child(odd)` : 홀수
     * `형제선택자:nth-child(even)` : 짝수
-    
 ## CSS 선택자 우선순위
 * `<style>` > `#` > `.` > `tag`
 * 1. `<tag style="">` 우선순위 높음
@@ -57,3 +56,25 @@
     * `margin:10px 20px 30px 40px;` 상/우/좌/하(시계방향)
     **위 4개 속성 방향은 padding 동일**
     * `margin:0 auto;` : 레이아웃 가운데 배치(너비가 화면보다 작아야함)
+# table HTML+CSS
+* `table > tr > th or td`
+* `table {width:300px}` 열이 3개일 경우 100씩 자동 분배
+    * `th:nth-child(1) {width:50px}`
+    * 전체 너비 300 중 첫번째 열만 50을 가지고, 나머지 값은 나머지 열들에게 자동 분배
+    * (열 안 내용 크기에 따라 달라짐)
+* `width, height, padding` 속성은 같은 수평/수직 방향에 해당하는 열에 함께 적용됨.
+    * 위 특징 때문에 공통 여백 및 크기는 1행 라인에 작성
+## 행 그룹 포함 table 작성 순서
+* `table` -> `thead` -> `tr` -> `th`
+* `table` -> `tbody` -> `tr` -> `th`
+* `table` -> `tbody` -> `tr` -> `td`
+* `table` -> `tfoot` -> `tr` -> `th`
+* `table` -> `tfoot` -> `tr` -> `td`
+## 수평/수직 열 합치기
+* 합치기 속성은 무조건 `th` 또는 `td` 태그에 입력가능!
+* 수평 열 합치기
+    * `th colspan="합치는 열 개수">내용</th>`
+    * 위 속성은 합치는 열 중 첫번재 시작태그에 작성하기
+    * 그 외 나머지 칸은 지우거나 주석걸기
+* 수직 열 합치기
+    * `<td rowspan="합치는 열 개수">내용</td>`
