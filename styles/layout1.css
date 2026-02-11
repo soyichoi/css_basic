@@ -1,0 +1,68 @@
+body {
+    height: 200vh;
+    background-image: url(../images/bg1.jpg);
+    /* background- 시작속성들은 배경이미지 전용 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-position: -500px -50%; */
+    background-position: center -60%;
+    background-attachment: fixed;/* 스크롤 관계없이 배경이 고정되는 기능 */
+}
+#slide_wrap {
+    width: 549px; height: 298px;
+    background-color: aqua;
+    /* background-color: aqua; yellow 등 영문명 색상 */
+    /* 실제 디자인 색상은 #....,핵사코드로 입력 */
+    margin: 109px auto 0;
+    /* 피그마 넘친 콘텐츠 숨기기 */
+    /* overflow: hidden; */
+    overflow: auto;
+}
+#slide_wrap .slide_container {
+    /* 기본 너비값 100% (부모와 같음) */
+    width: max-content;
+}
+#slide_wrap .slide_container .slide {
+    width: 549px; height: 298px;
+    display: inline-block;
+}
+#slide_wrap .slide_container .slide:nth-child(1) {background-color: pink;}
+#slide_wrap .slide_container .slide:nth-child(2) {background-color: beige;}
+#slide_wrap .slide_container .slide:nth-child(3) {background-color: yellowgreen;}
+#slide_wrap .slide_container .slide:nth-child(4) {background-color: palegoldenrod;}
+/* 베스트상품 슬라이드 */
+#best_slide_wrap {
+    background-color: white;
+    width: 1200px;/* height: 400px; 뷰포트에 높이는 안줘도됨*/
+    /* w(100%) h(auto(hug)) */
+    margin: 100px auto 0;
+    overflow: auto;
+}
+#best_slide_wrap h1 {}
+#best_slide_wrap .slide_container {
+    width: max-content;
+}
+#best_slide_wrap .slide_container .slide {
+    width: 600px; height: 400px;
+    font-size: 3rem;
+    /* display: inline-block;
+    margin-right: -3px; */
+    /* inline-block으로 옆으로 정렬 시 기본여백발생으로 margin-right:-3px로 제거하는 작업을 해줘야 한다. */
+    /* 옆으로 나열하는 레이아웃 속성(형제관계) */
+    float: left;
+}
+#best_slide_wrap .slide_container .slide:nth-child(1) {background-color: pink;}
+#best_slide_wrap .slide_container .slide:nth-child(2) {
+    background-color: palegreen;
+    clear: both;
+}
+#best_slide_wrap .slide_container .slide:nth-child(3) {
+    background-color: palegoldenrod;
+    /* float: none; */
+    /* float: none; -> float를 모두 해제함 */
+    /* clear: both; */
+    /* clear: both; -> 이전 형제(2)에서 온 float를 모두 해제함 */
+}
+#best_slide_wrap .slide_container .slide:nth-child(4) {background-color: cornflowerblue;}
+#slide_wrap .prev {}
+#slide_wrap .next {}

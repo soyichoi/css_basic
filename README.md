@@ -92,12 +92,12 @@
     * `window.location.href='실행주소'`
         * (위) `a href="실행주소"`와 동일한 JS 명령어
     * `button:hover {}` : 버튼에 마우스 올렸을 때 적용되는 디자인
-# 웹글꼴 `<link>`, `@font-face`
-## `<link>` 사용법과 특징
+## 웹글꼴 `<link>`, `@font-face`
+### `<link>` 사용법과 특징
 * `head` 태그 안 `reset.css` 연결보다 위에 작성
 * `@font-face`에 비해 사용이 간편함.
 * 작성한 html에서만 사용할 수 있다는 단점있음.
-## `@font-face` 사용법, 특징
+### `@font-face` 사용법, 특징
 * `reset.css` 파일 내 가장 위쪽 라인에 작성
 * `@font-face {`
     * (필수) `font-family:'사용할 글꼴명 임의작성';`
@@ -109,3 +109,16 @@
 * reset에 한번 연결해두면 모든 html에서 사용 가능
 * `@font-face {font-family:'사용할 글꼴명'}` (예)컴퓨터글꼴설치
 * `선택자 {font-family:'웹글꼴로 불러온 글꼴명'}` (예)포토샵글꼴사용
+## CSS 레이아웃 정렬 속성
+### display
+* `display:block;` : 인라인을 수직으로 나열
+* `display:inline-block;` : 블록을 수평으로 나열
+    * 기본 여백 3px 발생 -> 해결법 `margin-right:-3px;`
+### margin
+* `margin:상하여백 auto;` : 크기가 설정된 블록 또는 인라인을 화면 가운데 배치
+### float
+* `float:left;` : 형제 요소들을 왼쪽으로 순차정렬
+* `float:right;` : 형제 요소들을 오른쪽으로 정렬
+    * 2개 이상 작성 시 역순으로 정렬됨.
+* `float:none;` : float 제거
+* `float:both;` : 이전 형제에 작성된 float 정렬 해제
