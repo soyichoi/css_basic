@@ -121,4 +121,24 @@
 * `float:right;` : 형제 요소들을 오른쪽으로 정렬
     * 2개 이상 작성 시 역순으로 정렬됨.
 * `float:none;` : float 제거
-* `float:both;` : 이전 형제에 작성된 float 정렬 해제
+* `clear:both;` : 이전 형제에 작성된 float 정렬 해제
+### position
+* `position:relative;`
+    * 태그의 기존 위치에서 상/하/좌/우로 약간의 이동이 필요할 때
+    * 자식 또는 자손 요소에 absolute가 있어서 부모 기준이 필요할 때
+* `position:absolute;`
+    * 부모, 형제 요소와 겹치는 디자인 특징이 필요할 때
+    8. black 요소에 absolute 설정 시 inline-block 처럼 내용만큼 인식함
+    * 부모 후보(dl, dt)들에게 추가 position 설정 안할 시 body 기준으로 움직임
+    * `dl dt p {position:absolute;}`
+* `z-index`
+    * absolute로 인해 겹쳐진 형제 요소들 사이의 중첩순서가 필요할 때
+    * 0~999 작성가능 (단위작성(x))
+    * position 속성이 없으면 z-index 적용 불가
+## 가상 css 선택자 ::after, ::before
+* 시각적인 목적으로 디자인 배경, 선 등의 요소가 필요할 때 HTML태그없이 CSS만으로도 디자인을 만드는 선택자
+* `부모선택자::after {}` -> 부모의 마지막 자식에 디자인 생성
+* `부모선택자::before {}` -> 부모의 첫번째 자식에 디자인 생성
+### after, before 사용 시 필수 속성
+* `content:'';` -> 내용인식 속성, 글자 필요한 디자인이 아닐 경우 '' 빈따옴표
+* `display, background-color, width, height`
