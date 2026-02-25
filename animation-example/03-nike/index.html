@@ -29,6 +29,11 @@
         #v_btn a {
             width:100px; margin:0 10px; 
             display:flex; align-items:flex-end;
+            transform-origin: right bottom;/* 오른쪽 아래 발뒤꿈치 쪽 고정 */
+            transition: transform 0.3s;/* 0.3s 애니메이션 */
+        }
+        #v_btn a:hover {/* a에 마우스 올렸을때 */
+            transform: rotate(10deg);/* 10도 회전 */
         }
         #v_btn a img {width:100%;}
     </style>
